@@ -14,3 +14,11 @@
  *= require_self
  */
 
+a{
+background:#000;
+text-decoration:none;
+}
+
+a.visited{
+background:#205081;
+}
