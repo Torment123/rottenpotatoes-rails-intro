@@ -14,11 +14,3 @@
  *= require_self
  */
 
-a{
-color:#000;
-text-decoration:none;
-}
-
-a.visited{
-color:#205081;
-}
