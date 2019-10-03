@@ -14,11 +14,11 @@
  *= require_self
  */
 
-th#title_header{
+#title_header{
 color:#000;
 text-decoration:none;
 }
 
-th#title_header.visited{
+#title_header.visited{
 color:#205081;
 }
