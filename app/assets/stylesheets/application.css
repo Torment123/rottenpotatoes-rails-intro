@@ -15,10 +15,6 @@
  */
 
 #title_header{
-background-color:black;
+background-color:green;
 text-decoration:none;
-}
-
-#title_header.visited{
-background-color:#205081;
 }
