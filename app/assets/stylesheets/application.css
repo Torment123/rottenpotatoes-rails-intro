@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
-#title_header{
-background-color:green;
-text-decoration:none;
+a:visited{
+    background-color:green;
+}
+a:link{
+    background-color:blue;
 }
