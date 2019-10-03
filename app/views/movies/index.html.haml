@@ -4,9 +4,9 @@
 %table#movies.table.table-striped.col-md-12
   %thead
     %tr
-      <a id="title header">%th= link_to "Movie Title", :sort => "title"</a>
+      <%th id='title header">= link_to "Movie Title", :sort => "title"
       %th Rating
-      <a id="release_date_header">%th= link_to "Release Date", :sort => "release_date"</a>
+      <%th id="release_date_header">= link_to "Release Date", :sort => "release_date"
       %th More Info
   %tbody
     - @movies.each do |movie|
