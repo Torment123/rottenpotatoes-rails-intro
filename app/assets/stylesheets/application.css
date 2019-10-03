@@ -15,10 +15,10 @@
  */
 
 #title_header{
-color:#000;
+background-color:black;
 text-decoration:none;
 }
 
 #title_header.visited{
-color:#205081;
+background-color:#205081;
 }
