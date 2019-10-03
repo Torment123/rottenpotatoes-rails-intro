@@ -4,10 +4,9 @@
 %table#movies.table.table-striped.col-md-12
   %thead
     %tr
-     
-      <a href=movies_path, data-method="sort",id="title_header">Movie Title</a>
+      %th= link_to "Movie Title", :sort => "title",:id => "title_header"
       %th Rating
-      %th=link_to "Release Date", :sort => "release_date"
+      %th=link_to "Release Date", :sort => "release_date",id => "release_date_header"
       %th More Info
   %tbody
     - @movies.each do |movie|
