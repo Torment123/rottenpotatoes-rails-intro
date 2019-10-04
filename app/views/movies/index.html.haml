@@ -6,7 +6,7 @@
   Include:
   - @all_ratings.each do |rating|
     = rating
-    = check_box_tag "ratings[#{rating}]", "yes"
+    = check_box_tag "ratings[#{rating}]"
   = submit_tag 'Refresh', :class => 'btn btn-primary'
 
 
@@ -15,9 +15,9 @@
 
   %thead
     %tr
-      %th{params[:sort] == "title" ? {:class => "hilite"} : {}}= link_to "Movie Title", :sort => "title",:id => "title_header"
+      %th{params[:sort] == "title" ? {:class => "hilite"} : {}}= link_to "Movie Title", :sort => "title",:id => "title_header", :ratings=>@ratings
       %th Rating
-      %th{params[:sort] == "release_date" ? {:class => "hilite"} : {}}= link_to "Release Date", :sort => "release_date",:id => "release_date_header"
+      %th{params[:sort] == "release_date" ? {:class => "hilite"} : {}}= link_to "Release Date", :sort => "release_date",:id => "release_date_header", :ratings=>@ratings
       %th More Info
   %tbody
     - @movies.each do |movie|
