@@ -24,8 +24,7 @@ class MoviesController < ApplicationController
     
     # @filtered_keys = params[:ratings].keys
     # @movies = Movie.where(:rating => @filtered_keys)
-    session.delete(:ratings)
-    session.delete(:sort)
+    
     if session[:ratings].nil?
       session[:ratings] = Movie.uniq.pluck(:rating)
     end
