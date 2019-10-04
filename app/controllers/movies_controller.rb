@@ -40,7 +40,9 @@ class MoviesController < ApplicationController
     else
       session[:sort] = params[:sort]
       
-      session[:ratings] = params[:ratings].keys
+      if Hash === params[:ratings]
+        session[:ratings] = params[:ratings].keys
+      end
       
       @movies = Movie.where(rating: session[:ratings]).order(params[:sort])
     end
