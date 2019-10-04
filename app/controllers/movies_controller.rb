@@ -39,9 +39,9 @@ class MoviesController < ApplicationController
       redirect_to movies_path(:ratings =>params[:ratings],:sort =>session[:sort])
     else
       session[:sort] = params[:sort]
-      if Hash === params[:ratings]
-        session[:ratings] = params[:ratings].keys
-      end
+      
+      session[:ratings] = params[:ratings].keys
+      
       @movies = Movie.where(rating: session[:ratings]).order(params[:sort])
     end
     
