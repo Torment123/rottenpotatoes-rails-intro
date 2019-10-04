@@ -6,7 +6,7 @@
   Include:
   - @all_ratings.each do |rating|
     = rating
-    = check_box_tag "ratings[#{rating}]", 'yes', true
+    = check_box_tag "ratings[#{rating}]" <?php if (!empty($_POST['txtCheck'])): ?> checked="checked"<?php endif; ?>
   = submit_tag 'Refresh', :class => 'btn btn-primary'
 
 
