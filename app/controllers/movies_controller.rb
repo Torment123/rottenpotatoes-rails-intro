@@ -16,7 +16,7 @@ class MoviesController < ApplicationController
     @all_ratings = Movie.uniq.pluck(:rating)
     
     if params[:ratings].nil?
-      redirect_to movies_path
+      @movies = Movie.order(params[:sort])
     else
       @movies = Movie.where(rating: params[:ratings].keys).order(params[:sort])
     end
