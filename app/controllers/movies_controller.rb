@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     @movies = Movie.order(params[:sort])
     # @movies = Movie.where(rating:filtered_keys).order(params[:sort])
     @all_ratings = Movie.uniq.pluck(:rating)
-    @filtered_keys = params[:ratings].keys
+    # @filtered_keys = params[:ratings].keys
     # @movies = Movie.where(:rating => @filtered_keys)
   end
 
